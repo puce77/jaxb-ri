@@ -340,6 +340,13 @@
                                     org.apache.tools.ant.types;resolution:=optional,
                                     *
                                 </Import-Package>
+                                <Require-Capability>osgi.extender;
+                                    filter:="(osgi.extender=osgi.serviceloader.registrar)"
+                                </Require-Capability>
+                                <Provide-Capability>
+                                    osgi.serviceloader; osgi.serviceloader=javax.xml.bind.JAXBContextFactory,
+                                    osgi.serviceloader; osgi.serviceloader=com.sun.tools.xjc.Plugin
+                                </Provide-Capability>
                             </instructions>
                         </configuration>
                     </execution>
